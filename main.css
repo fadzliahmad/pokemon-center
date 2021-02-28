@@ -1,0 +1,362 @@
+:root {
+  --primary-color: red;
+  --secondary-color: #232e33;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: var(--secondary-color);
+}
+
+#navbar {
+  width: 100%;
+  background-color: #192024;
+  font-weight: bold;
+  font-size: large;
+}
+
+#navbar .container {
+  padding: 1.5em 0;
+}
+
+#navbar ul {
+  list-style: none;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#navbar li a {
+  text-decoration: none;
+  color: white;
+  padding-right: 3em;
+  position: relative;
+  -webkit-transition: all ease-in-out 250ms;
+  transition: all ease-in-out 250ms;
+}
+
+#navbar li a::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 0.3em;
+  width: 0%;
+  background-color: var(--primary-color);
+  bottom: -1em;
+  -webkit-transition: all ease-in-out 250ms;
+  transition: all ease-in-out 250ms;
+}
+
+#navbar li a:hover::after {
+  width: 60%;
+}
+
+#navbar li a:hover {
+  color: var(--primary-color);
+}
+
+#navbar li:first-child {
+  margin-right: auto;
+  margin-left: 3em;
+}
+
+#hero .container {
+  background: url(images/pokeball.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 15em;
+  display: block;
+  margin-left: auto;
+}
+
+#hero .left-col {
+  margin-left: 6em;
+  padding: 5em 0;
+}
+
+#hero .left-col h1 {
+  color: white;
+  font-size: 4em;
+  font-weight: 700;
+}
+
+#hero .left-col .subhead {
+  font-size: 2em;
+  font-weight: 400;
+  color: white;
+  margin-top: -1em;
+  margin-left: 0.4em;
+}
+
+#hero .left-col .primary-cta {
+  background: var(--primary-color);
+  color: black;
+  text-decoration: none;
+  padding: .6em 1.3em;
+  font-size: 1.2em;
+  border-radius: 0.5em;
+  border: 4px black solid;
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 0.8em;
+  margin-top: 1em;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+#hero .left-col .primary-cta:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 5px 15px rgba(0, 0, 0, 0.6);
+          box-shadow: 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.card-section {
+  background: var(--primary-color);
+  padding-bottom: 12em;
+  /*card2*/
+  /*card3*/
+}
+
+.card-section .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card-section .card-main {
+  padding: 1em;
+  width: 300px;
+  margin-right: 1em;
+}
+
+.card-section .card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 300px;
+      grid-template-columns: 300px;
+  -ms-grid-rows: 210px 210px 80px;
+      grid-template-rows: 210px 210px 80px;
+      grid-template-areas: "images" "text" "stats";
+  font-family: 'Lato',sans-serif;
+  border-radius: 18px;
+  background: white;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.card-section .card-image {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: images;
+  background: url(images/pikachu.png);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+
+.card-section .card-text {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: text;
+  margin: 25px;
+}
+
+.card-section .card-text .number {
+  color: #ff076e;
+}
+
+.card-section .card-text p {
+  color: grey;
+  font-size: 1em;
+  font-weight: 300;
+}
+
+.card-section .card-text h2 {
+  margin-top: 0px;
+  font-size: 28px;
+}
+
+.card-section .card-stats {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: stats;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: #ff076e;
+}
+
+.card-section .card-stats .stat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+  color: white;
+}
+
+.card-section .card-stats .type {
+  font-size: 11px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.card-section .card-stats .value {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.card-section .card-stats .border {
+  border-left: 1px solid #ac1a57;
+  border-right: 1px solid #ac1a57;
+}
+
+.card-section .card:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 15px 25px rgba(0, 0, 0, 0.6);
+          box-shadow: 15px 25px rgba(0, 0, 0, 0.6);
+}
+
+.card-section .card-image.card2 {
+  background: url(images/charmander.png);
+  background-size: cover;
+}
+
+.card-section .card-text.card2 .date {
+  color: #ff4d07;
+}
+
+.card-section .card-stats.card2 .border {
+  border-left: 1px solid #b94314;
+  border-right: 1px solid #b94314;
+}
+
+.card-section .card-stats.card2 {
+  background: #ff4d07;
+}
+
+.card-section .card-image.card3 {
+  background: url(images/bulbasaur.png);
+  background-size: cover;
+}
+
+.card-section .card-text.card3 .date {
+  color: #ff4d07;
+}
+
+.card-section .card-stats.card3 .border {
+  border-left: 1px solid #b94314;
+  border-right: 1px solid #b94314;
+}
+
+.card-section .card-stats.card3 {
+  background: #07c5ff;
+}
+
+.card-section .card-image.card4 {
+  background: url(images/squirtle.png);
+  background-size: cover;
+}
+
+.card-section .card-text.card4 .date {
+  color: #ff4d07;
+}
+
+.card-section .card-stats.card4 .border {
+  border-left: 1px solid #b94314;
+  border-right: 1px solid #b94314;
+}
+
+.card-section .card-stats.card4 {
+  background: #07c5ff;
+}
+
+.card-section-header {
+  text-align: center;
+  padding-top: 1em;
+  font-size: xx-large;
+}
+
+.pokecenter-section {
+  background: url(images/pokecenter.jpg);
+  height: 100vh;
+}
+
+.pokecenter-section h1 {
+  margin: 0;
+  margin-left: 1.5em;
+  text-align: start;
+  font-size: 3em;
+  padding-top: 2em;
+  padding-left: 1em;
+  padding-bottom: .5em;
+  background: black;
+  color: white;
+  border-bottom-left-radius: 1em;
+}
+
+.main-footer ul {
+  background-color: white;
+  list-style: none;
+  padding: 3em 2em 2em;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-footer ul li a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  font-size: 1.1em;
+  font-weight: bold;
+  border-radius: 5px 5px;
+  border-right: 3px grey solid;
+  padding: 0.5em;
+  margin-right: 2em;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+.main-footer ul li a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 5px 15px rgba(0, 0, 0, 0.6);
+          box-shadow: 5px 15px rgba(0, 0, 0, 0.6);
+}
+/*# sourceMappingURL=main.css.map */
